@@ -12,12 +12,14 @@
 
 // setup Exceptional with the following two lines
 require dirname(__FILE__)."/../exceptional_async.php";
-ExceptionalAsync::setup("YOUR-API-KEY", false, "/var/log/exceptional/");
+ExceptionalAsync::setup("YOUR-API-KEY", false, "/var/log/exceptional");
 
 // control which errors are caught with error_reporting
 error_reporting(E_ALL);
 
 // start testing
 $math = 1 / 0;
+
+echo "end\n";
 
 ?>

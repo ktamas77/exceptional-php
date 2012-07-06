@@ -5,6 +5,7 @@ class ExceptionalRemote {
      * Does the actual sending of an exception
      */
     static function send_exception($exception) {
+        echo 'geci';
         $uniqueness_hash = $exception->uniqueness_hash();
         $hash_param = ($uniqueness_hash) ? null : "&hash={$uniqueness_hash}";
         $url = "/api/errors?api_key=".Exceptional::$api_key."&protocol_version=".Exceptional::$protocol_version.$hash_param;
