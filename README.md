@@ -1,4 +1,4 @@
-# Exceptional PHP
+# Exceptional PHP - With Asynchronous exception handling
 
 The power of [Exceptional](http://getexceptional.com) for PHP
 
@@ -26,6 +26,13 @@ You can turn on SSL by setting the second parameter to `true`.
 
 ```php
 Exceptional::setup($api_key, true);
+```
+
+You can log locally by defining a directory with the Async library:
+
+```php
+require "path/to/exceptional_async.php";
+ExceptionalAsync::setup("YOUR-API-KEY", false, "/var/log/exceptional/");
 ```
 
 ## Filtering sensitive data
